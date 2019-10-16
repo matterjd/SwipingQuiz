@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:SwipingQuiz;assembly=SwipingQuiz"
+             mc:Ignorable="d"
+             x:Class="SwipingQuiz.MainPage"
+             BackgroundImageSource="yggdrasil.png">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>        
+    </ContentPage.BindingContext>
+    
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <!-- Place new controls here -->
+            <Label Text="{Binding GetQuestion, Mode=TwoWay}" 
+                   HeightRequest="100"
+                   FontSize="36"
+                   BackgroundColor="WhiteSmoke"
+                   HorizontalTextAlignment="Center"/>
+
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image Source="wind"
+               HeightRequest="{OnPlatform Android=250,iOS=250}"
+               WidthRequest="{OnPlatform Android=250,iOS=250}"
+               BackgroundColor="GhostWhite"
+               HorizontalOptions="Center"
+               IsVisible="{Binding IsWindVisible}"/>
+            <Image Source="earth"
+                   HeightRequest="{OnPlatform Android=250,iOS=250}"
+                   WidthRequest="{OnPlatform Android=250,iOS=250}"
+                   BackgroundColor="GhostWhite"
+                   HorizontalOptions="Center"
+                   IsVisible="{Binding IsEarthVisible}"/>
+            <Image Source="fire"
+                   HeightRequest="{OnPlatform Android=250,iOS=250}"
+                   WidthRequest="{OnPlatform Android=250,iOS=250}"
+                   BackgroundColor="GhostWhite"
+                   HorizontalOptions="Center"
+                   IsVisible="{Binding IsFireVisible}"/>
+            <Image Source="water"
+                   HeightRequest="{OnPlatform Android=250,iOS=250}"
+                   WidthRequest="{OnPlatform Android=250,iOS=250}"
+                   BackgroundColor="GhostWhite"
+                   HorizontalOptions="Center"
+                   IsVisible="{Binding IsWaterVisible}"/>
+
+            <Image Source="eagle"
+               HeightRequest="{OnPlatform Android=250,iOS=250}"
+               WidthRequest="{OnPlatform Android=250,iOS=250}"
+               BackgroundColor="GhostWhite"
+               HorizontalOptions="Center"
+                   Aspect="AspectFit"
+               IsVisible="{Binding IsAnimal1}"/>
+            <Image Source="lion"
+                   HeightRequest="{OnPlatform Android=250,iOS=250}"
+                   WidthRequest="{OnPlatform Android=250,iOS=250}"
+                   BackgroundColor="GhostWhite"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   IsVisible="{Binding IsAnimal2}"/>
+            <Image Source="housefly"
+                   HeightRequest="{OnPlatform Android=250,iOS=250}"
+                   WidthRequest="{OnPlatform Android=250,iOS=250}"
+                   BackgroundColor="GhostWhite"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   IsVisible="{Binding IsAnimal3}"/>
+            <Image Source="bull"
+                   HeightRequest="{OnPlatform Android=250,iOS=250}"
+                   WidthRequest="{OnPlatform Android=250,iOS=250}"
+                   BackgroundColor="GhostWhite"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   IsVisible="{Binding IsAnimal4}"/>
+
+            <Image Source="gimli"
+                   IsVisible="{Binding IsGimli}"
+                   Aspect="AspectFit"
+                   HeightRequest="350"
+                   WidthRequest="250"
+                   HorizontalOptions="Center"/>
+            <Image Source="legolas"
+                   IsVisible="{Binding IsLegolas}"
+                   Aspect="AspectFit"
+                   HeightRequest="350"
+                   WidthRequest="250"
+                   HorizontalOptions="Center"/>
+            <Image Source="aragorn"
+                   IsVisible="{Binding IsAragorn}"
+                   Aspect="AspectFit"
+                   HeightRequest="350"
+                   WidthRequest="250"/>
+            <Image Source="gandalf"
+                   Aspect="AspectFit"
+                   IsVisible="{Binding IsGandalf}"
+                   HeightRequest="350"
+                   WidthRequest="250"
+                   HorizontalOptions="Center"/>
+            
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="Purple" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsWindVisible}"/>
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="Brown" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsEarthVisible}"/>
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="OrangeRed" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsFireVisible}"/>
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="DeepSkyBlue" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsWaterVisible}"/>
+
+            <Label HeightRequest="100" WidthRequest="350" BackgroundColor="Black" TextColor="Purple" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsFreeTime1}"/>
+            <Label HeightRequest="100" WidthRequest="350" BackgroundColor="Black" TextColor="Brown" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsFreeTime2}"/>
+            <Label HeightRequest="100" WidthRequest="350" BackgroundColor="Black" TextColor="OrangeRed" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsFreeTime3}"/>
+            <Label HeightRequest="100" WidthRequest="350" BackgroundColor="Black" TextColor="DeepSkyBlue" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsFreeTime4}"/>
+
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="Purple" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsStrength1}"/>
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="Brown" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsStrength2}"/>
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="OrangeRed" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsStrength3}"/>
+            <Label HeightRequest="60" WidthRequest="300" BackgroundColor="Black" TextColor="DeepSkyBlue" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsStrength4}"/>
+
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="Purple" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsAnimal1}"/>
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="Brown" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsAnimal2}"/>
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="OrangeRed" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsAnimal3}"/>
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="DeepSkyBlue" FontSize="36" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" Text="{Binding GetElement}" IsVisible="{Binding IsAnimal4}"/>
+
+
+            <Label HeightRequest="60" WidthRequest="200" BackgroundColor="Black" TextColor="Cyan" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" FontSize="36" Text="{Binding ResultText}" IsVisible="{Binding IsResult}"/>
+            <Button HeightRequest="50" WidthRequest="150" FontSize="26" Text="RESTART" HorizontalOptions="Center" Command="{Binding SubmitCommand}" IsVisible="{Binding IsResult}"/>
+
+            <BoxView HeightRequest="300" WidthRequest="350" HorizontalOptions="CenterAndExpand" Opacity="0" BackgroundColor="Red">
+                <BoxView.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Left" Command="{Binding Swipecommand}" CommandParameter="Left"/>
+                    <SwipeGestureRecognizer Direction="Right" Command="{Binding Swipecommand}" CommandParameter="Right"/>
+                    <!--<SwipeGestureRecognizer Direction="Up" Swiped="OnSwiped"/>-->
+                    <!--<SwipeGestureRecognizer Direction="Down" Swiped="OnSwiped"/>-->
+                </BoxView.GestureRecognizers>
+
+            </BoxView>
+            
+        </StackLayout>
+
+
+        <!--<StackLayout Orientation="Horizontal" VerticalOptions="End" HeightRequest="150">
+            <Label BackgroundColor="Black" TextColor="White" Text="Left = 'No'; Right = 'Yes'" FontSize="26" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>-->
+        
+
+
+    </StackLayout>
+
+</ContentPage>
